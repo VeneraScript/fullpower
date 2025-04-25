@@ -2032,8 +2032,7 @@ function RayfieldLibrary:CreateWindow(Settings)
 			local ButtonValue = {}
 
 			local Button = Elements.Template.Button:Clone()
-			ApplyCardStyle(Button)
-Button.Name = ButtonSettings.Name
+			Button.Name = ButtonSettings.Name
 			Button.Title.Text = ButtonSettings.Name
 			Button.Visible = true
 			Button.Parent = TabPage
@@ -2527,8 +2526,7 @@ Button.Name = ButtonSettings.Name
 		-- Input
 		function Tab:CreateInput(InputSettings)
 			local Input = Elements.Template.Input:Clone()
-			ApplyCardStyle(Input)
-Input.Name = InputSettings.Name
+			Input.Name = InputSettings.Name
 			Input.Title.Text = InputSettings.Name
 			Input.Visible = true
 			Input.Parent = TabPage
@@ -2618,8 +2616,7 @@ Input.Name = InputSettings.Name
 		-- Dropdown
 		function Tab:CreateDropdown(DropdownSettings)
 			local Dropdown = Elements.Template.Dropdown:Clone()
-			ApplyCardStyle(Dropdown)
-if string.find(DropdownSettings.Name,"closed") then
+			if string.find(DropdownSettings.Name,"closed") then
 				Dropdown.Name = "Dropdown"
 			else
 				Dropdown.Name = DropdownSettings.Name
@@ -3070,8 +3067,7 @@ if string.find(DropdownSettings.Name,"closed") then
 			local ToggleValue = {}
 
 			local Toggle = Elements.Template.Toggle:Clone()
-			ApplyCardStyle(Toggle)
-Toggle.Name = ToggleSettings.Name
+			Toggle.Name = ToggleSettings.Name
 			Toggle.Title.Text = ToggleSettings.Name
 			Toggle.Visible = true
 			Toggle.Parent = TabPage
@@ -3241,8 +3237,7 @@ Toggle.Name = ToggleSettings.Name
 		function Tab:CreateSlider(SliderSettings)
 			local SLDragging = false
 			local Slider = Elements.Template.Slider:Clone()
-			ApplyCardStyle(Slider)
-Slider.Name = SliderSettings.Name
+			Slider.Name = SliderSettings.Name
 			Slider.Title.Text = SliderSettings.Name
 			Slider.Visible = true
 			Slider.Parent = TabPage
@@ -3929,23 +3924,5 @@ end)
 
 return RayfieldLibrary
 
-
-
--- Card Style Function for Custom Visual
-function ApplyCardStyle(frame)
-   local corner = Instance.new("UICorner")
-   corner.CornerRadius = UDim.new(0, 12)
-   corner.Parent = frame
-
-   local shadow = Instance.new("ImageLabel")
-   shadow.Image = "rbxassetid://1316045217"
-   shadow.ImageTransparency = 0.8
-   shadow.Size = UDim2.new(1, 6, 1, 6)
-   shadow.Position = UDim2.new(0, -3, 0, -3)
-   shadow.BackgroundTransparency = 1
-   shadow.ZIndex = frame.ZIndex - 1
-   shadow.Name = "RayfieldCardShadow"
-   shadow.Parent = frame
-end
 
 return Library
