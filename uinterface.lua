@@ -3926,8 +3926,8 @@ return RayfieldLibrary
 
 
 
--- Apply Orion Card Style
-local function ApplyCardStyle(frame)
+-- Card Style Function for Custom Visual
+function ApplyCardStyle(frame)
    local corner = Instance.new("UICorner")
    corner.CornerRadius = UDim.new(0, 12)
    corner.Parent = frame
