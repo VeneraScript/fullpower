@@ -2032,7 +2032,8 @@ function RayfieldLibrary:CreateWindow(Settings)
 			local ButtonValue = {}
 
 			local Button = Elements.Template.Button:Clone()
-			Button.Name = ButtonSettings.Name
+			ApplyCardStyle(Button)
+Button.Name = ButtonSettings.Name
 			Button.Title.Text = ButtonSettings.Name
 			Button.Visible = true
 			Button.Parent = TabPage
@@ -2526,7 +2527,8 @@ function RayfieldLibrary:CreateWindow(Settings)
 		-- Input
 		function Tab:CreateInput(InputSettings)
 			local Input = Elements.Template.Input:Clone()
-			Input.Name = InputSettings.Name
+			ApplyCardStyle(Input)
+Input.Name = InputSettings.Name
 			Input.Title.Text = InputSettings.Name
 			Input.Visible = true
 			Input.Parent = TabPage
@@ -2616,7 +2618,8 @@ function RayfieldLibrary:CreateWindow(Settings)
 		-- Dropdown
 		function Tab:CreateDropdown(DropdownSettings)
 			local Dropdown = Elements.Template.Dropdown:Clone()
-			if string.find(DropdownSettings.Name,"closed") then
+			ApplyCardStyle(Dropdown)
+if string.find(DropdownSettings.Name,"closed") then
 				Dropdown.Name = "Dropdown"
 			else
 				Dropdown.Name = DropdownSettings.Name
@@ -3067,7 +3070,8 @@ function RayfieldLibrary:CreateWindow(Settings)
 			local ToggleValue = {}
 
 			local Toggle = Elements.Template.Toggle:Clone()
-			Toggle.Name = ToggleSettings.Name
+			ApplyCardStyle(Toggle)
+Toggle.Name = ToggleSettings.Name
 			Toggle.Title.Text = ToggleSettings.Name
 			Toggle.Visible = true
 			Toggle.Parent = TabPage
@@ -3237,7 +3241,8 @@ function RayfieldLibrary:CreateWindow(Settings)
 		function Tab:CreateSlider(SliderSettings)
 			local SLDragging = false
 			local Slider = Elements.Template.Slider:Clone()
-			Slider.Name = SliderSettings.Name
+			ApplyCardStyle(Slider)
+Slider.Name = SliderSettings.Name
 			Slider.Title.Text = SliderSettings.Name
 			Slider.Visible = true
 			Slider.Parent = TabPage
