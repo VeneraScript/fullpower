@@ -3947,3 +3947,5 @@ function ApplyCardStyle(frame)
    shadow.Name = "RayfieldCardShadow"
    shadow.Parent = frame
 end
+
+return Library
