@@ -3923,6 +3923,3 @@ task.delay(4, function()
 end)
 
 return RayfieldLibrary
-
-
-return Library
